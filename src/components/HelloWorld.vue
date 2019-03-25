@@ -1,20 +1,38 @@
 <template>
   <div class="hello">
-    <h1>Feed de Fotos</h1>
+    <div class="container">
+      <div class="row">
+        <BarraEsquerda class="col-3 barra" />
+        <Feed class="col-6" />
+        <BarraDireita class="col-3 barra" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import BarraDireita from "./BarraDireita";
+import BarraEsquerda from "./BarraEsquerda";
+import Feed from "./Feed";
 export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  components: {
+    BarraDireita,
+    BarraEsquerda,
+    Feed
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.barra {
+  background-color: #bbbbbb;
+  height: "100%";
+}
 h3 {
   margin: 40px 0 0;
 }
